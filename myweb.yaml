@@ -22,6 +22,8 @@ spec:
       labels:
         app: myweb
     spec:
+      imagePullSecrets:
+      - name: regcred
       containers:
       - image: docker.nimtechnology.com/kaniko/myweb:<TAG>
         imagePullPolicy: Always
